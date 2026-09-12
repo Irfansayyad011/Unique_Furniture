@@ -1,0 +1,104 @@
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.about-story__para {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-badges {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.about-badge__num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--brown);
+  line-height: 1;
+}
+.about-badge__label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  box-shadow: var(--shadow-xl);
+}
+
+/* Map Layout */
+.about-map-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .about-map-layout { grid-template-columns: 1fr; }
+}
+
+.about-contact-info {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.about-contact-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  border-bottom: 1px solid var(--cream-dark);
+  padding-bottom: 0.875rem;
+}
+
+.about-contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.about-contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--cream);
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.about-contact-icon--wa { background: #E8F5E9; color: #2E7D32; }
+
+.about-contact-label { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 2px; }
+.about-contact-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+a.about-contact-value { color: var(--brown); }
+a.about-contact-value:hover { text-decoration: underline; }

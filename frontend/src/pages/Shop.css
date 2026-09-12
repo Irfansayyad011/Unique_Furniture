@@ -1,0 +1,105 @@
+.shop-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.shop-search {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.shop-search__icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+.shop-search__input {
+  width: 100%;
+  padding: 0.7rem 2.75rem 0.7rem 2.75rem;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: var(--radius-full);
+  background: var(--white);
+  font-size: 0.9375rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  color: var(--text-dark);
+}
+.shop-search__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+.shop-search__clear {
+  position: absolute;
+  right: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  cursor: pointer;
+}
+.shop-search__clear:hover { color: var(--error); }
+
+.shop-sort {
+  min-width: 180px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full) !important;
+  padding-left: 1.25rem;
+}
+
+.shop-filter-btn { flex-shrink: 0; }
+
+/* Category pills */
+.category-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.category-pill {
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--cream-dark);
+  background: var(--white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.category-pill:hover {
+  border-color: var(--brown);
+  color: var(--brown);
+}
+.category-pill--active {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Empty state */
+.shop-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+.shop-empty span { font-size: 3.5rem; }
+.shop-empty h3 { font-family: var(--font-heading); font-size: 1.5rem; }
+.shop-empty p { color: var(--text-muted); }
+
+/* Skeleton card */
+.skeleton-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
